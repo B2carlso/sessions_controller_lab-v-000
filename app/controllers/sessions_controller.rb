@@ -10,4 +10,8 @@ class SessionsController < ApplicationController
      redirect_to action: "new"
    end
  end
+
+ def destroy
+  session.delete :username
+  end
 end
